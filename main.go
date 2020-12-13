@@ -6,13 +6,11 @@ import (
 	"github.com/wailsapp/wails"
 )
 
-func basic() string {
-	err := beeep.Notify("Title", "Message body", "./icon.png")
+func basic(title string, message string) {
+	err := beeep.Notify(title, message, "./icon.png")
 	if err != nil {
 		panic(err)
 	}
-
-	return "World!"
 }
 
 func main() {
@@ -21,8 +19,8 @@ func main() {
 	css := mewn.String("./frontend/build/static/css/main.css")
 
 	app := wails.CreateApp(&wails.AppConfig{
-		Width:  1024,
-		Height: 768,
+		Width:  320,
+		Height: 580,
 		Title:  "crud",
 		JS:     js,
 		CSS:    css,
