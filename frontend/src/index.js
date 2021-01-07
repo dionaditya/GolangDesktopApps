@@ -4,7 +4,6 @@ import 'core-js/stable';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 import * as Wails from '@wailsapp/runtime';
 
 Wails.Init(() => {

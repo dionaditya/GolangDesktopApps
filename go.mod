@@ -9,6 +9,7 @@ require (
 	github.com/leaanthony/mewn v0.10.7
 	github.com/lextoumbourou/idle v0.0.0-20150614083601-8eb78af3d865
 	github.com/martinlindhe/notify v0.0.0-20181008203735-20632c9a275a
+	github.com/mitchellh/mapstructure v1.4.0
 	github.com/n-marshall/go-cp v0.0.0-20180115193924-61436d3b7cfa // indirect
 	github.com/nmrshll/go-cp v0.0.0-20180115193924-61436d3b7cfa
 	github.com/wailsapp/wails v1.10.1

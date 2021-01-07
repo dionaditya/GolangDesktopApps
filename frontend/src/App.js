@@ -31,7 +31,13 @@ function App() {
   }
 
   const handleResetTimer = () => {
-    window.backend.basic('Timer stopped', 'Session has been ended');
+    const myData = {
+      A: "hello world",
+      B: 3.14,
+      C: 3,
+    }
+    window.backend.byPassData(myData).then(result => console.log(result))
+    window.backend.Robot.EndSession(todo).then(console.log)
     setTimerStarted('reset')
   }
 
@@ -59,7 +65,7 @@ function App() {
 
   return (
     <BaseLayout>
-        <h1>Todo</h1>
+        <h1>Session</h1>
         {
           timerStarted === 'none' || timerStarted === 'reset' ? (
           <input value={todo} onChange={e => handleTodoInput(e)} placeholder="input todo"/>
@@ -94,9 +100,9 @@ function App() {
             Stop
           </StyledButton>
         </StyledCTAContainer>
-        {/* <Draggable>
+        <Draggable>
           <div>I can now be moved around!</div>
-        </Draggable> */}
+        </Draggable>
     </BaseLayout>
   );
 }
